@@ -22,6 +22,8 @@ body {
     overflow: hidden;
     margin: 20px;
     animation: fadeInScale 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Section */
@@ -55,6 +57,8 @@ body {
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
     display: none; /* Hide all sections by default */
+    flex: 1;
+    overflow-y: auto; /* Enable scrolling */
 }
 
 .section.active {
@@ -137,6 +141,9 @@ body {
     padding: 10px;
     background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
 }
 
 .nav-item {
@@ -267,4 +274,13 @@ body.dark-mode .nav-item.active {
 
 body.dark-mode .settings-option {
     background-color: #3d3d3f;
+    color: #ffffff;
+}
+
+body.dark-mode .toggle-switch {
+    background-color: #555;
+}
+
+body.dark-mode .toggle-switch:checked {
+    background-color: #7C4DFF;
 }
