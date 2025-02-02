@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminder - Your Homework Companion</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <!-- Default View: Header and Info -->
+        <section id="home" class="section active">
+            <header class="header">
+                <h1 class="title">Teminder ENCHANTED</h1>
+                <p class="subtitle">Teme Reminder, but better.</p>
+            </header>
+            <div class="info-section">
+                <p>Welcome to Teminder ENCHANTED!</p>
+            </div>
+            <div class="about-section">
+                <h2 class="section-title">Despre Teminder E</h2>
+                <div class="about-card">
+                    <div class="about-item">
+                        <span class="about-icon">📱</span>
+                        <h3></h3>
+                        <p>Teminder ENCHANTED are un design usor de folosit, mai placut si mai viu!</p>
+                    </div>
+                    <div class="about-item">
+                        <span class="about-icon">⏰</span>
+                        <h3>Responsabilitate si Punctualitate</h3>
+                        <p>Teme p/u acasa vor fi strict actualizate intre orele 4-5,uneori mai devreme.</p>
+                    </div>
+                    <div class="about-item">
+                        <span class="about-icon">📅</span>
+                        <h3>Organizatie si Reamintiri</h3>
+                        <p>La fel ca Teminder, Teminder ENCHANTED va reaminti temele pentru acasa, fiind ca un plan B in caz de nu ti-ai insemnat pe acasa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homework Section -->
+        <section id="homework" class="section">
+            <h2 class="section-title">Pentru acasa maine</h2>
+            <ul class="homework-list">
+                <li>
+                    <span class="subject">Math</span>
+                    <span class="task">Ex. 1-5 pg. 45</span>
+                </li>
+                <li>
+                    <span class="subject">Physics</span>
+                    <span class="task">Lab Report</span>
+                </li>
+                <li>
+                    <span class="subject">Literature</span>
+                    <span class="task">Read Chapter 3</span>
+                </li>
+            </ul>
+
+            <h2 class="section-title">P/u acasa toata saptamana</h2>
+            <div class="week-container">
+                <ul class="week-list">
+                    <li class="week-item">
+                        <div class="day-header">
+                            <span class="day-icon">📅</span>
+                            <span class="day">Mate</span>
+                        </div>
+                        <div class="day-content">
+                            <span class="task">Ex ... p ....</span>
+                        </div>
+                    </li>
+                    <li class="week-item">
+                        <div class="day-header">
+                            <span class="day-icon">📅</span>
+                            <span class="day">L.Romana</span>
+                        </div>
+                        <div class="day-content">
+                            <span class="task">poezia ... p ....t</span>
+                        </div>
+                    </li>
+                    <li class="week-item">
+                        <div class="day-header">
+                            <span class="day-icon">📅</span>
+                            <span class="day">L. Rusa</span>
+                        </div>
+                        <div class="day-content">
+                            <span class="task">bla bla bla... ble ble ble....</span>
+                        </div>
+                    </li>
+                    <li class="week-item">
+                        <div class="day-header">
+                            <span class="day-icon">📅</span>
+                            <span class="day">L.Engleza</span>
+                        </div>
+                        <div class="day-content">
+                            <span class="task">new york</span>
+                        </div>
+                    </li>
+                    <li class="week-item">
+                        <div class="day-header">
+                            <span class="day-icon">📅</span>
+                            <span class="day">Istorie</span>
+                        </div>
+                        <div class="day-content">
+                            <span class="task">Examen</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section">
+            <h2 class="section-title">Orarul Lectiilor</h2>
+            <div class="schedule-nav">
+                <button id="prev-day" class="nav-button">◀</button>
+                <span id="current-day">Monday</span>
+                <button id="next-day" class="nav-button">▶</button>
+            </div>
+            <ul class="schedule-list" id="lectii-list">
+                <!-- Schedule items will be added here dynamically -->
+            </ul>
+
+            <h2 class="section-title">Orarul sunetelor</h2>
+            <div class="bell-schedule">
+                <div class="bell-item">
+                    <div class="bell-time">8:00 AM</div>
+                    <div class="bell-info">
+                        <span class="bell-icon">🔔</span>
+                        <span class="bell-label">test</span>
+                    </div>
+                </div>
+                <div class="bell-item">
+                    <div class="bell-time">9:00 AM</div>
+                    <div class="bell-info">
+                        <span class="bell-icon">🔔</span>
+                        <span class="bell-label">test</span>
+                    </div>
+                </div>
+                <div class="bell-item">
+                    <div class="bell-time">10:00 AM</div>
+                    <div class="bell-info">
+                        <span class="bell-icon">🔔</span>
+                        <span class="bell-label">test</span>
+                    </div>
+                </div>
+                <div class="bell-item">
+                    <div class="bell-time">11:00 AM</div>
+                    <div class="bell-info">
+                        <span class="bell-icon">🔔</span>
+                        <span class="bell-label">test</span>
+                    </div>
+                </div>
+                <div class="bell-item">
+                    <div class="bell-time">12:00 PM</div>
+                    <div class="bell-info">
+                        <span class="bell-icon">🍽️</span>
+                        <span class="bell-label">test</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section">
+            <h2 class="section-title">Setari</h2>
+            <div class="settings-option">
+                <label for="dark-mode-toggle">Dark Mode</label>
+                <input type="checkbox" id="dark-mode-toggle" class="toggle-switch">
+            </div>
+        </section>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-target="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Acasa</span>
+            </button>
+            <button class="nav-item" data-target="homework">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Teme pt acasa</span>
+            </button>
+            <button class="nav-item" data-target="schedule">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">Orare</span>
+            </button>
+            <button class="nav-item" data-target="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Setari</span>
+            </button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+
+  </body>
+</html>
