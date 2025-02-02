@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f5f7, #e0e0e7);
+    color: #1d1d1f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90vw; /* Adapt to screen width */
+    max-width: 375px; /* Maximum width for larger screens */
+    height: 90vh; /* Adapt to screen height */
+    max-height: 667px; /* Maximum height for larger screens */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    animation: fadeInScale 0.5s ease-in-out;
+}
+
+/* Header Section */
+.header {
+    padding: 20px;
+    background: linear-gradient(135deg, #6A0DAD, #C77DFF);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #6A0DAD, #C77DFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: none; /* Hide all sections by default */
+}
+
+.section.active {
+    display: block; /* Show active section */
+}
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #6A0DAD, #C77DFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Homework List */
+.homework-list, .week-list, .schedule-list, .bell-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.homework-list li, .week-list li, .schedule-list li, .bell-list li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInSlide 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.homework-list li:hover, .week-list li:hover, .schedule-list li:hover, .bell-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.subject, .day {
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+.task {
+    color: #666;
+    margin-left: 10px;
+}
+
+/* Schedule Navigation */
+.schedule-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #6A0DAD;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}
+
+#current-day {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-item.active {
+    color: #6A0DAD;
+}
+
+.nav-item:hover {
+    color: #6A0DAD;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.nav-text {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Settings Section */
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch:checked {
+    background-color: #6A0DAD;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #1d1d1f, #2c2c2e);
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #2c2c2e;
+    color: #ffffff;
+}
+
+body.dark-mode .header {
+    background: linear-gradient(135deg, #4A148C, #7C4DFF);
+}
+
+body.dark-mode .section-title {
+    background: linear-gradient(135deg, #4A148C, #7C4DFF);
+}
+
+body.dark-mode .homework-list li, 
+body.dark-mode .week-list li, 
+body.dark-mode .schedule-list li, 
+body.dark-mode .bell-list li {
+    background-color: #3d3d3f;
+    color: #ffffff;
+}
+
+body.dark-mode .subject, 
+body.dark-mode .day {
+    color: #7C4DFF;
+}
+
+body.dark-mode .task {
+    color: #ccc;
+}
+
+body.dark-mode .bottom-nav {
+    background-color: #3d3d3f;
+    border-top: 1px solid #555;
+}
+
+body.dark-mode .nav-item {
+    color: #ccc;
+}
+
+body.dark-mode .nav-item.active {
+    color: #7C4DFF;
+}
+
+body.dark-mode .settings-option {
+    background-color: #3d3d3f;
+}
